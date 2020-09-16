@@ -1,0 +1,383 @@
+{
+	"info": {
+		"_postman_id": "318744fa-c2c9-4f20-94d2-61adad398ca1",
+		"name": "smart3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\":\"kalevilas18@gmail.com\",\n    \"password\":\"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5002/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sku_id",
+							"value": "test_id5",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "test_name",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"value": "fff",
+							"type": "text"
+						},
+						{
+							"key": "brand",
+							"value": "test_brand",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "test_cat",
+							"type": "text"
+						},
+						{
+							"key": "batch_no",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "mfg_date",
+							"value": "01-05-2019",
+							"type": "text"
+						},
+						{
+							"key": "exp_date",
+							"value": "01-05-2020",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/add-product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"add-product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "product_1",
+							"type": "text"
+						},
+						{
+							"key": "brand",
+							"value": "B1",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "cat2",
+							"type": "text"
+						},
+						{
+							"key": "batch_no",
+							"value": "23",
+							"type": "text"
+						},
+						{
+							"key": "mfg_date",
+							"value": "01-08-2020",
+							"type": "text"
+						},
+						{
+							"key": "exp_date",
+							"value": "01-08-2021",
+							"type": "text"
+						},
+						{
+							"key": "_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/vilas/Downloads/Virat-Kohli.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/update-product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"update-product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/delete-product/xxs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"delete-product",
+						"xxs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/products?_id=5f3f2514c6a19624aabfd2cd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "_id",
+							"value": "5f3f2514c6a19624aabfd2cd"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\":\"kalevilas18@gmail.com\",\n    \"password\":\"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5002/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZjYxN2UxMjIwYjA3NDI3YzM5N2NlYTAiLCJpYXQiOjE2MDAyMjYzNzgsImV4cCI6MTYwMTQzNTk3OH0.f0mnH0Rs-dUPxCpYFW54-5vmdR5hbcy3NsX-ixfMoiw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"category\":\"cat1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5002/api/add-category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"add-category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Size",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZjYxN2UxMjIwYjA3NDI3YzM5N2NlYTAiLCJpYXQiOjE2MDAyMjYzNzgsImV4cCI6MTYwMTQzNTk3OH0.f0mnH0Rs-dUPxCpYFW54-5vmdR5hbcy3NsX-ixfMoiw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"size\":18\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5002/api/add-size",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"add-size"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Categories",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZjYxN2UxMjIwYjA3NDI3YzM5N2NlYTAiLCJpYXQiOjE2MDAyMjYzNzgsImV4cCI6MTYwMTQzNTk3OH0.f0mnH0Rs-dUPxCpYFW54-5vmdR5hbcy3NsX-ixfMoiw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5002/api/product-categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"product-categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Sizes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZjYxN2UxMjIwYjA3NDI3YzM5N2NlYTAiLCJpYXQiOjE2MDAyMjYzNzgsImV4cCI6MTYwMTQzNTk3OH0.f0mnH0Rs-dUPxCpYFW54-5vmdR5hbcy3NsX-ixfMoiw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5002/api/product-sizes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"product-sizes"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
